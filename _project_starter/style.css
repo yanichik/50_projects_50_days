@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*	asterisk applies to text-align-last: */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", "sans-serif";
+	display: flex;
+	flex-direction: column;
+	/*	because flex-direction is column, the "align-items: center" aligns items horizontally	*/
+	align-items: center;
+	/*	justify-contents aligns in the opposite direction from align-items. In this case, centers vertically	*/
+	justify-content: center; 
+	/*	"vh" = viewport height. when 100, it takes the entire height of the browser	*/
+	height: 100vh;
+	/*	overflow sets behavior for element's overflow, i.e. when an element's content is too
+		large to fit into its block formatting context	
+		source: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow: */
+	overflow: hidden;
+	margin: 0;
+}
