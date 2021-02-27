@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*	asterisk applies to text-align-last: */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", "sans-serif";
+	display: flex;
+	flex-direction: column;
+	/*	because flex-direction is column, the "align-items: center" aligns items horizontally	*/
+	align-items: center;
+	/*	justify-contents aligns in the opposite direction from align-items. In this case, centers vertically	*/
+	justify-content: center; 
+	/*	"vh" = viewport height. when 100, it takes the entire height of the browser	*/
+	height: 100vh;
+	/*	overflow sets behavior for element's overflow, i.e. when an element's content is too
+		large to fit into its block formatting context	
+		source: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow: */
+	overflow: hidden;
+	margin: 0;
+	/*border: solid green 3px;*/
+}
+
+h1 {
+	text-align: center;
+	/*border-style: solid;*/
+	display: flex;
+	padding-left: 10px;
+}
+
+.panel h3 {
+	opacity: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 90vw;
+	/*border: solid red 2px;*/
+	/*max-height: 80vh;
+	max-width: 80vw;*/
+}
+
+.panel {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/*background-size: */
+	display: flex;
+	padding-left: 5px;
+	flex: 0.5;
+	/*border: solid 2px blue;*/
+	border-radius: 20px;
+	margin: 10px;
+	height: 80vh;
+	align-items: flex-end;
+	font-size: 10px;
+	color: white;
+	cursor: pointer;
+	/* transitions are comma-delimted so multiple can be placed with comma separation */
+	transition: flex .7s linear, font-size .7s linear;
+	position: relative;
+}
+
+.panel.active {
+	flex: 2;
+}
+
+.panel.active h3 {
+	opacity: 1;
+	font-size: 20px;
+	transition: opacity .5s ease-in .3s;
+}
+
