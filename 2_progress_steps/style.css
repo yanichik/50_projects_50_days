@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+	--empty-line-border: #D3D3D3;
+	--fill-line-border: #5FB3CE;
+}
+
+/*	asterisk applies to text-align-last: */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	font-family: "Roboto", "sans-serif";
+	display: flex;
+	flex-direction: column;
+	/*	because flex-direction is column, the "align-items: center" aligns items horizontally	*/
+	align-items: center;
+	/*	justify-contents aligns in the opposite direction from align-items. In this case, centers vertically	*/
+	justify-content: center; 
+	/*	"vh" = viewport height. when 100, it takes the entire height of the browser	*/
+	height: 100vh;
+	/*	overflow sets behavior for element's overflow, i.e. when an element's content is too
+		large to fit into its block formatting context	
+		source: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow: */
+	overflow: hidden;
+	margin: 0;
+}
+
+.container{
+	/*background-color: blue;*/
+	text-align: center;
+
+}
+
+.progress-container::before{
+	content: '';
+	background-color: var(--empty-line-border);
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	transform: translateY(-50%);
+	z-index: -1;
+	top: 50%;
+	left: 0;
+}
+
+.progress-container{
+	display: flex;
+	/*background-color: green;*/
+	justify-content: space-between;
+	position: relative;
+	/*max-width: 100%;*/
+	width: 350px;
+	margin-bottom: 25px;
+}
+
+.progress{
+	background-color: var(--fill-line-border);
+	position: absolute;
+	height: 4px;
+	width: 0%;
+	transform: translateY(-50%);
+	z-index: -1;
+	top: 50%;
+	left: 0;
+	transition: 0.4s ease;
+}
+
+.circle {
+	background-color: white;
+	color: black;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid var(--empty-line-border);
+}
+
+.circle.active {
+	border-color: var(--fill-line-border);
+}
+
+.btn {
+	background-color: var(--fill-line-border);
+	color: white;
+	border-radius: 5px;
+	padding: 5px 20px;
+	margin: 5px;
+	font-size: 16px;
+	/*font-size: auto;*/
+	cursor: pointer;
+}
+
+.btn:active {
+	/*transform: scale(.95);*/
+}
+
+.btn:focus {
+	outline: 50;
+}
+
+.btn:disabled {
+	background-color: var(--empty-line-border);
+	cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
