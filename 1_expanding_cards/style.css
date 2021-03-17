@@ -45,13 +45,15 @@ h1 {
 }
 
 .panel {
-	background-size: cover;
+	background-size: auto 100%;
+	/*background-size: cover;*/
 	background-position: center;
 	background-repeat: no-repeat;
+	background-color: black;
 	/*background-size: */
 	display: flex;
 	padding-left: 5px;
-	flex: 0.5;
+	flex: 1;
 	/*border: solid 2px blue;*/
 	border-radius: 20px;
 	margin: 10px;
@@ -72,6 +74,8 @@ h1 {
 .panel.active h3 {
 	opacity: 1;
 	font-size: 20px;
+	/*color: black;*/
+	position: absolute;
 	transition: opacity .5s ease-in .3s;
 }
 
