@@ -56,7 +56,7 @@ body {
 	margin-bottom: 25px;
 }
 
-.progress{
+#progress{
 	background-color: var(--fill-line-border);
 	position: absolute;
 	height: 4px;
@@ -65,7 +65,7 @@ body {
 	z-index: -1;
 	top: 50%;
 	left: 0;
-	transition: 0.4s ease;
+	transition: 0.8s ease;
 }
 
 .circle {
@@ -78,6 +78,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	border: 3px solid var(--empty-line-border);
+	transition: 0.8s ease;
 }
 
 .circle.active {
